@@ -9,6 +9,7 @@ class Task(ft.UserControl):
         self.task_status_change = task_status_change
         self.task_delete = task_delete
 
+
     def build(self):
         self.display_task = ft.Checkbox(
             value= False, label= self.task_name, on_change= self.status_changed
@@ -95,7 +96,7 @@ class TodoApp(ft.UserControl):
             width=600,
             controls=[
                 ft.Row(
-                    [ft.Text(value= "Todas", style=ft.TextThemeStyle.HEADLINE_MEDIUM)],
+                    [ft.Text(value= "Tarefas diarias", style=ft.TextThemeStyle.HEADLINE_MEDIUM)],
                     alignment=ft.MainAxisAlignment.CENTER,
                 ),
                 ft.Row(
@@ -117,7 +118,7 @@ class TodoApp(ft.UserControl):
                             controls= [
                                 self.items_left,
                                 ft.OutlinedButton(
-                                    text="Clear completed", on_click= self.clear_clicked
+                                    text="Limpar tarefas completas", on_click= self.clear_clicked
                                 ),
                             ],
                         ),
